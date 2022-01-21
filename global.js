@@ -21,8 +21,8 @@ const int = setInterval(() => {
   console.log('in the interval');
 }, 1000);
 
-console.log(__dirname);
-console.log(__filename);
+console.log(__dirname); // get path of directory
+console.log(__filename); //get path of file currently running
 
 // no access to DOM methods
-console.log(document.querySelector);
+//console.log(document.querySelector); // error because document is in window object and global doesn't have that in namespace

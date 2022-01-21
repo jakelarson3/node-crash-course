@@ -5,6 +5,7 @@ const ages = [20, 25, 30, 35];
 
 // module.exports = people;
 
+// export these things from the file
 module.exports = {
   people,
   ages,

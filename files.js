@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs'); // get file system
 
 // reading files
 fs.readFile('./docs/blog.txt', (err, data) => {
@@ -20,7 +20,7 @@ fs.writeFile('./docs/blog2.txt', 'hello, again', () => {
 });
 
 // directories
-if (!fs.existsSync('./assets')) {
+if (!fs.existsSync('./assets')) { // asynchronus
   fs.mkdir('./assets', err => {
     if (err) {
       console.log(err);
@@ -37,8 +37,8 @@ if (!fs.existsSync('./assets')) {
 }
 
 // deleting files
-if (fs.existsSync('./docs/deleteme.txt')) {
-  fs.unlink('./docs/deleteme.txt', err => {
+if (fs.existsSync('./docs/deleteme.txt')) { // asynchronous
+  fs.unlink('./docs/deleteme.txt', err => { // unlink deletes files
     if (err) {
       console.log(err);
     }
